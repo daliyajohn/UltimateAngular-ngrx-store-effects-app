@@ -37,7 +37,7 @@ export const ROUTES: Routes = [
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forChild(ROUTES),
-    StoreModule.forFeature('products',reducerConnect )
+    StoreModule.forFeature('productsList',reducerConnect )
   ],
   providers: [...fromServices.services],
   declarations: [...fromContainers.containers, ...fromComponents.components],

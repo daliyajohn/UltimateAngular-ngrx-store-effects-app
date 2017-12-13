@@ -10,7 +10,50 @@ export interface pizzaState  {
     loading:boolean
 }
 export const initialState: pizzaState = {
-    data: [],
+    data: [
+        {
+            "name": "Seaside Surfin'",
+            "toppings": [
+              {
+                "id": 6,
+                "name": "mushroom"
+              },
+              {
+                "id": 7,
+                "name": "olive"
+              },
+              {
+                "id": 2,
+                "name": "bacon"
+              },
+              {
+                "id": 3,
+                "name": "basil"
+              },
+              {
+                "id": 1,
+                "name": "anchovy"
+              },
+              {
+                "id": 8,
+                "name": "onion"
+              },
+              {
+                "id": 11,
+                "name": "sweetcorn"
+              },
+              {
+                "id": 9,
+                "name": "pepper"
+              },
+              {
+                "id": 5,
+                "name": "mozzarella"
+              }
+            ],
+            "id": 2
+          }
+    ],
     loaded:false,
     loading:false
 }
@@ -45,3 +88,7 @@ export function reducer(state = initialState, action: fromPizzas.PizzasAction):p
     }
     return state;
 }
+
+export const getPizzaLoading = (states:pizzaState) => states.loading
+export const getPizzaLoaded = (states:pizzaState) => states.loaded
+export const getPizza = (states:pizzaState) => states.data
